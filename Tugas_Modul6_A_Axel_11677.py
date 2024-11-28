@@ -4,7 +4,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 
-model = load_model(r'C:\Users\ACER\Downloads\Tugas6_A_11677\model_mobilenet.h5')
+model = load_model('model_mobilenet.h5')
 class_names = ['Matang', 'Mentah']
 
 def classify_image(image_path):
@@ -40,7 +40,7 @@ def custom_progress_bar(confidence, color1, color2):
     st.sidebar.markdown(progress_html, unsafe_allow_html=True)
 
 # Streamlit UI
-st.title("Prediksi Kematangan Buah Naga - 1677")
+st.title("Prediksi Kematangan Buah Naga - 1660") 
 
 uploaded_files = st.file_uploader("Unggah Gambar (Beberapa diperbolehkan)", type=["jpg", "png", "jpeg"],accept_multiple_files=True)
 
